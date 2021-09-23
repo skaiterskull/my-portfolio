@@ -1,0 +1,35 @@
+.sm-bar {
+  max-width: 50px;
+  display: flex;
+  font-size: 3rem;
+  justify-content: center;
+  background: white;
+  padding: 1rem;
+  border: 2px solid limegreen;
+  border-radius: 20px;
+}
+
+.sm-bar ul {
+  padding: 0;
+  margin: 0;
+}
+
+.sm-bar-item {
+  list-style-type: none;
+}
+
+.sm-bar-item a {
+  text-decoration: none;
+}
+
+.item-facebook {
+  color: blue;
+}
+
+.item-instagram {
+  color: brown;
+}
+
+.item-github {
+  color: black;
+}
