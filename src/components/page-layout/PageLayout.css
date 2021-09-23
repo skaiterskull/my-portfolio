@@ -1,0 +1,9 @@
+.page-layout {
+  position: relative;
+}
+
+.social-media {
+  position: fixed;
+  top: 200px;
+  right: 50px;
+}
