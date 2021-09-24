@@ -1,5 +1,5 @@
 .navbar {
-  background: rgb(196, 174, 174);
+  background: #282a35;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -10,26 +10,75 @@
 }
 
 .navbar-right {
+  position: relative;
 }
 
-.navbar-left ul {
+.navbar-left ul,
+.navbar-dropdown ul {
   display: flex;
   gap: 2rem;
   margin: 0;
   padding: 0;
 }
 
-.navbar-left ul li {
+.navbar-dropdown ul {
+  min-width: 350px;
+}
+
+.navbar-dropdown {
+  position: absolute;
+  opacity: 0;
+  transform: translateY(-30px);
+  left: -110px;
+  background: white;
+  pointer-events: none;
+  padding: 1rem;
+  border-radius: 30px;
+  box-shadow: 0 2px 5px 0 grey;
+  transition: opacity 500ms ease-in-out, transform 500ms ease-in-out;
+}
+
+.navbar-left ul li,
+.navbar-dropdown ul li {
   list-style-type: none;
 }
 
-.navbar-left ul li a {
+.navbar-left ul li a,
+.navbar-dropdown ul li a {
   text-decoration: none;
   color: white;
   transition: 300ms ease-in;
 }
 
-.navbar-left ul li a:hover {
+.navbar-dropdown ul li a {
+  color: #282a35;
+}
+
+.navbar-left ul li a:hover,
+.navbar-dropdown ul li a:hover {
   color: grey;
   border-bottom: 3px solid grey;
+}
+
+@media screen and (max-width: 800px) {
+  .navbar-left {
+    display: none;
+  }
+
+  .navbar {
+    justify-content: center;
+  }
+
+  .navright-text::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: " \f0d7";
+    color: white;
+  }
+
+  .navbar-right:hover .navbar-dropdown {
+    opacity: 0.8;
+    transform: translateY(0);
+    pointer-events: all;
+  }
 }

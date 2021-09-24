@@ -6,10 +6,14 @@ import "./PageLayout.css";
 export const PageLayout = ({ children }) => {
   return (
     <div className="page-layout">
-      <nav>
-        <Navbar />
-      </nav>
-      <div className="main-content">{children}</div>
+      <div className="nav-wrapper">
+        <nav>
+          <Navbar />
+        </nav>
+      </div>
+      <div className="main-content-wrapper">
+        <div className="main-content">{children}</div>
+      </div>
       <div className="social-media">
         <SocialMediaBar />
       </div>
