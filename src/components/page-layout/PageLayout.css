@@ -1,9 +1,37 @@
 .page-layout {
   position: relative;
+  width: 100%;
+}
+
+.nav-wrapper {
+  width: 100%;
+  background: #282a35;
+}
+
+.main-content-wrapper {
+  width: 100%;
+  background: rgb(243, 242, 242);
+}
+
+nav {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.main-content {
+  width: 1000px;
+  background: rgb(243, 242, 242);
+  margin: 0 auto;
 }
 
 .social-media {
   position: fixed;
   top: 200px;
   right: 50px;
+}
+
+@media screen and (max-width: 1000px) {
+  nav {
+    width: 100%;
+  }
 }
