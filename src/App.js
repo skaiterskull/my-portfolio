@@ -1,13 +1,34 @@
-import { PageLayout } from "../src/components/page-layout/PageLayout";
 import "./App.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Skills } from "./pages/skills/Skills";
+import { Project } from "./pages/project/Project";
+import { ContactMe } from "./pages/contact-me/ContactMe";
 
 function App() {
   return (
-    <div className>
-      <PageLayout>
-        <div style={{ height: "3000px" }}>dsadsadsadsa</div>
-      </PageLayout>
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/skills">
+          <Skills />
+        </Route>
+
+        <Route path="/projects">
+          <Project />
+        </Route>
+
+        <Route path="/contact-me">
+          <ContactMe />
+        </Route>
+
+        <Route exact path="/">
+          <h1>This is Home page</h1>
+        </Route>
+
+        <Route path="*">
+          <h2>404 Page Not Found</h2>
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
