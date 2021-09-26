@@ -2,8 +2,16 @@ import React from "react";
 import "./Skill-component.css";
 import bgreact from "../../assets/react.png";
 import bgredux from "../../assets/redux.png";
-import html from "../../assets/html.png";
-import css from "../../assets/css.png";
+import bghtml from "../../assets/html.png";
+import bgcss from "../../assets/css.png";
+import bgnode from "../../assets/node.png";
+import bgexpress from "../../assets/express.png";
+import bgrest from "../../assets/restapi.png";
+import bgmysql from "../../assets/mysql.png";
+import bgmongo from "../../assets/mongoDB.png";
+import bgvercel from "../../assets/vercel.png";
+import bgheroku from "../../assets/heroku.png";
+import bgatlas from "../../assets/atlas.png";
 import "aos/dist/aos.css";
 import AOS from "aos";
 import { useEffect } from "react";
@@ -21,62 +29,68 @@ export const SkillComponent = () => {
     {
       ctgry: "Frontend",
       skill: [
-        { name: "Html 5", image: "fa-brands fa-html5" },
-        { name: "CSS 3", image: "fa-brands fa-css3-alt" },
-        { name: "React", image: "fa-brands fa-react" },
-        { name: "React-Redux", image: "" },
+        { name: "Html 5", image: bghtml, color: "#ff5722" },
+        { name: "CSS 3", image: bgcss, color: "#0b51c1" },
+        { name: "React", image: bgreact, color: "#01ffff" },
+        { name: "React-Redux", image: bgredux, color: "#764abc" },
       ],
+      color: "skyblue",
+      transition: "fade-right",
     },
     {
       ctgry: "Backend",
       skill: [
-        { name: "Node.js", image: "fa-brands fa-node-js" },
-        { name: "Express.js", image: "" },
-        { name: "REST Api", image: "" },
+        { name: "Node.js", image: bgnode, color: "#8cc64d" },
+        { name: "Express.js", image: bgexpress, color: "#f7df1e" },
+        { name: "REST Api", image: bgrest, color: "#00619e" },
       ],
+      color: "limegreen",
+      transition: "fade-left",
     },
     {
       ctgry: "Database",
       skill: [
-        { name: "MySQL", image: "fa-solid fa-database" },
-        { name: "MongoDB", image: "fa-solid fa-database" },
+        { name: "MySQL", image: bgmysql, color: "#cd7f00" },
+        { name: "MongoDB", image: bgmongo, color: "#419f39" },
       ],
+      color: "#fa0efd",
+      transition: "fade-right",
     },
     {
       ctgry: "Deployment",
       skill: [
-        { name: "Vercel FrontEnd Deployment", image: "" },
-        { name: "Heroku", image: "" },
-        { name: "Atlas", image: "" },
+        { name: "Vercel", image: bgvercel, color: "black" },
+        { name: "Heroku", image: bgheroku, color: "#420098" },
+        { name: "Atlas", image: bgatlas, color: "#419f39" },
       ],
+      color: "#ff1a75",
+      transition: "fade-left",
     },
   ];
 
   return (
-    <div className="skills-wrapper" data-aos="fade-right">
-      <div className="skill">
-        <div className="skill-title">
-          <h2>Front End</h2>
-        </div>
-        <div className="skill-list">
-          <div className="skill-item">
-            <img src={bgreact} alt=""></img>
-            <span style={{ color: "#01ffff" }}>React</span>
+    <>
+      {skills.map((item) => {
+        return (
+          <div className="skills-wrapper" data-aos={item.transition}>
+            <div className="skill">
+              <div className="skill-title" style={{ background: item.color }}>
+                <h2>{item.ctgry}</h2>
+              </div>
+              <div className="skill-list">
+                {item.skill.map((row) => {
+                  return (
+                    <div className="skill-item">
+                      <img src={row.image} alt=""></img>
+                      <span style={{ color: row.color }}>{row.name}</span>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
           </div>
-          <div className="skill-item">
-            <img src={bgredux} alt=""></img>
-            <span style={{ color: "#764abc" }}>React-Redux</span>
-          </div>
-          <div className="skill-item">
-            <img src={html} alt=""></img>
-            <span style={{ color: "#ff5722" }}>HTML 5</span>
-          </div>
-          <div className="skill-item">
-            <img src={css} alt=""></img>
-            <span style={{ color: "#0b51c1" }}>CSS 3</span>
-          </div>
-        </div>
-      </div>
-    </div>
+        );
+      })}
+    </>
   );
 };
