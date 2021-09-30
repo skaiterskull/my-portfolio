@@ -1,4 +1,5 @@
 import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Skills } from "./pages/skills/Skills";
 import { Project } from "./pages/project/Project";
@@ -24,9 +25,7 @@ function App() {
           <h1>This is Home page</h1>
         </Route>
 
-        <Route path="*">
-          <h2>404 Page Not Found</h2>
-        </Route>
+        <Route path="*"></Route>
       </Switch>
     </Router>
   );

@@ -22,6 +22,7 @@ export const SkillComponent = () => {
       duration: 1000,
       easing: "ease-in",
       delay: 100,
+      once: true,
     });
   }, []);
 

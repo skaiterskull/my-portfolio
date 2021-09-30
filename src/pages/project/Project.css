@@ -1,0 +1,93 @@
+.projects-wrapper {
+  width: 100%;
+  text-align: center;
+}
+
+.projects-wrapper h2 {
+  color: black;
+}
+
+.project {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.project-card {
+  position: relative;
+  background: grey;
+  width: 300px;
+  height: 300px;
+  margin-bottom: 2rem;
+  margin-left: 1.5rem;
+  color: white;
+}
+
+.project-card::before,
+.project-card::after {
+  content: "";
+  position: absolute;
+  top: 1.25em;
+  bottom: 1.25em;
+  left: 1.25em;
+  right: 1.25em;
+}
+
+.project-card::before {
+  transform: scale(0, 1);
+  transition: transform ease-out 250ms;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+.project-card::after {
+  transform: scale(1, 0);
+  transition: transform ease-out 250ms;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  opacity: 1;
+  transition: opacity ease-out 250ms;
+}
+
+.card-text {
+  position: absolute;
+  top: 40%;
+  left: 17%;
+  width: 200px;
+  opacity: 0;
+  transition: opacity ease-out 250ms;
+}
+
+.card-detail {
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: bolder;
+  color: white;
+  transition: color ease-out 250ms;
+}
+
+.project-card:hover::before {
+  transform: scale(1.05, 1);
+}
+
+.project-card:hover::after {
+  transform: scale(1, 1.05);
+}
+
+.project-card:hover .project-image {
+  opacity: 0.4;
+}
+
+.project-card:hover .card-text {
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.card-detail:hover {
+  color: gray;
+}
