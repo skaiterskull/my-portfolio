@@ -60,14 +60,15 @@
   left: 17%;
   width: 200px;
   opacity: 0;
-  transition: opacity ease-out 250ms;
+  transform: translateY(50px);
+  transition: opacity ease-out 250ms, transform ease-out 250ms;
 }
 
 .card-detail {
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: bolder;
-  color: white;
+  color: Gray;
   transition: color ease-out 250ms;
 }
 
@@ -85,9 +86,17 @@
 
 .project-card:hover .card-text {
   opacity: 0.8;
+  transform: translateY(0px);
   z-index: 1;
 }
 
 .card-detail:hover {
-  color: gray;
+  color: lightgrey;
+}
+
+.techs {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 1rem;
+  margin-left: 0.5rem;
 }
