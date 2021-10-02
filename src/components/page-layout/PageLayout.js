@@ -1,6 +1,7 @@
 import React from "react";
 import { SocialMediaBar } from "../socialMedia-bar/SocialMediaBar";
 import { Navbar } from "../navbar/Navbar";
+import { Footer } from "../footer/Footer";
 import "./PageLayout.css";
 
 export const PageLayout = ({ children }) => {
@@ -13,6 +14,11 @@ export const PageLayout = ({ children }) => {
       </div>
       <div className="main-content-wrapper">
         <div className="main-content">{children}</div>
+      </div>
+      <div className="footer-wrapper">
+        <div className="footer">
+          <Footer />
+        </div>
       </div>
       <div className="social-media">
         <SocialMediaBar />

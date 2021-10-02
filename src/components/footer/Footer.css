@@ -1,0 +1,65 @@
+.wrapper-footer {
+  padding: 1rem;
+  padding-bottom: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  width: 100%;
+}
+
+.project-span-text {
+  margin-right: 5px;
+}
+
+.footer-list ul {
+  list-style-type: none;
+  padding: 10px;
+}
+
+.footer-list ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-list ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 1rem;
+  transform: scale(1);
+}
+
+.footer-list ul li:hover {
+  animation: jiggle 0.5s linear;
+}
+
+.footer-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+@keyframes jiggle {
+  /* start at 0deg and this scale size.
+     scale size is repeated here to maintain smooth scaling */
+  0% {
+    transform: rotate(0deg);
+  }
+  /* midway rotate 2deg right */
+  50% {
+    transform: rotate(2deg);
+  }
+  /* end rotate -2deg left */
+  100% {
+    transform: rotate(0deg);
+  }
+}
