@@ -3,10 +3,11 @@
   display: flex;
   font-size: 3rem;
   justify-content: center;
-  background: white;
+
   opacity: 0.5;
   padding: 1rem;
   border-radius: 20px;
+  opacity: 0.5;
 }
 
 .sm-bar ul {
@@ -32,4 +33,10 @@
 
 .item-github {
   color: black;
+}
+
+@media screen and (max-width: 1000px) {
+  .sm-bar {
+    display: none;
+  }
 }
