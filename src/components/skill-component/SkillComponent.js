@@ -71,6 +71,7 @@ export const SkillComponent = () => {
 
   return (
     <>
+      <div className="skill-quote">Continue to study and learn new skills</div>
       {skills.map((item) => {
         return (
           <div className="skills-wrapper" data-aos={item.transition}>

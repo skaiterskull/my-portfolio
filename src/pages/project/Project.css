@@ -6,6 +6,13 @@
 
 .projects-wrapper h2 {
   color: black;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-weight: bolder;
+}
+
+.projects-wrapper p {
+  margin-bottom: 1.5rem;
 }
 
 .project {

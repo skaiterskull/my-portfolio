@@ -4,6 +4,22 @@
   justify-content: center;
 }
 
+.skill-quote {
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.skill-quote::before {
+  content: open-quote;
+}
+
+.skill-quote::after {
+  content: close-quote;
+}
+
 .skill {
   width: 700px;
   background: ghostwhite;

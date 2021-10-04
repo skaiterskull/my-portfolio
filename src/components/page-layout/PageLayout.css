@@ -10,7 +10,6 @@
 
 .main-content-wrapper {
   width: 100%;
-  background: rgb(243, 242, 242);
 }
 
 .footer-wrapper {
@@ -25,7 +24,7 @@ nav {
 
 .main-content {
   width: 1000px;
-  background: rgb(243, 242, 242);
+
   margin: 0 auto;
 }
 

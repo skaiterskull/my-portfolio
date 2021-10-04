@@ -6,9 +6,42 @@ import bgntdtl from "../../assets/ntdtl.png";
 import bgcalc from "../../assets/calculator.png";
 import bgfruit from "../../assets/searchfruit.png";
 import bgportfolio from "../../assets/portfolio.png";
+import bgcommerce from "../../assets/ecommerce.png";
+import "aos/dist/aos.css";
+import AOS from "aos";
+import { useEffect } from "react";
 
 export const Project = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: "ease-in",
+      delay: 100,
+      once: true,
+    });
+  }, []);
+
   const projectsData = [
+    {
+      image: bgcommerce,
+      name: "E-commerce",
+      tech: [
+        "React",
+        "React-bootstrap",
+        "React-redux",
+        "Javascript",
+        "Express.js",
+        "Node.js",
+        "MongoDB",
+        "AWS",
+      ],
+      description:
+        "E-commerce site created with MERN stack. It has two main function, first is the admin page for the admin and the other one is for the client. ",
+      link: {
+        github: "https://github.com/skaiterskull/ADmin-cms",
+        url: "",
+      },
+    },
     {
       image: bgntdtl,
       name: "Task Management",
@@ -78,7 +111,7 @@ export const Project = () => {
   return (
     <div>
       <PageLayout>
-        <div className="projects-wrapper">
+        <div className="projects-wrapper" data-aos="fade-up">
           <h2>Project Galery</h2>
           <p>Welcome to my projects. Here are some highlight of my projects.</p>
           <div className="project">

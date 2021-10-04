@@ -1,0 +1,17 @@
+.contactme-wrapper {
+  padding: 1.5rem;
+  position: relative;
+}
+
+.spinner {
+  text-align: center;
+}
+
+.contactme-alert {
+  transition: opacity ease-out 250ms;
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  right: 30%;
+  left: 30%;
+}
