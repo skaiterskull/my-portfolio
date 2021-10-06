@@ -1,0 +1,32 @@
+.home-wrapper {
+  background: url(../../assets/home-bg.jpg);
+  width: 100vw;
+  min-height: 100vh;
+  position: relative;
+}
+
+.home-navbar {
+  position: absolute;
+  width: 100%;
+  color: black;
+}
+
+.home-content {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.home-main-description {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.home-main-description h2 {
+  font-weight: 600;
+}

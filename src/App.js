@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Skills } from "./pages/skills/Skills";
 import { Project } from "./pages/project/Project";
 import { ContactMe } from "./pages/contact-me/ContactMe";
+import { Home } from "./pages/home/Home";
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
         </Route>
 
         <Route exact path="/">
-          <h1>This is Home page</h1>
+          <Home />
         </Route>
 
         <Route path="*"></Route>

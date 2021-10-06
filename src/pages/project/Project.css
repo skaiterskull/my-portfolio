@@ -9,10 +9,12 @@
   margin-top: 2rem;
   margin-bottom: 2rem;
   font-weight: bolder;
+  color: white;
 }
 
 .projects-wrapper p {
   margin-bottom: 1.5rem;
+  color: white;
 }
 
 .project {
@@ -28,6 +30,7 @@
   margin-bottom: 2rem;
   margin-left: 1.5rem;
   color: white;
+  box-shadow: 2px 2px 15px grey;
 }
 
 .project-card::before,
