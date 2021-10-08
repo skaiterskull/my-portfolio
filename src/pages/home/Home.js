@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar } from "../../components/navbar/Navbar";
+import { NavBar } from "../../components/navbar/Navbar";
 import "./Home.css";
 import bghome from "../../assets/home-picture.png";
 
@@ -7,7 +7,7 @@ export const Home = () => {
   return (
     <div className="home-wrapper">
       <div className="home-navbar">
-        <Navbar />
+        <NavBar />
       </div>
       <div className="home-content">
         <div className="home-main-description">
