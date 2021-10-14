@@ -20,6 +20,10 @@
 }
 
 .home-main-description {
+  box-shadow: 3px 3px 20px grey;
+  border-radius: 10px;
+  background: #4f4fe0;
+  padding: 3rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -29,4 +33,29 @@
 
 .home-main-description h2 {
   font-weight: 600;
+  max-width: max-content;
+  position: relative;
+  padding-inline-start: 0;
+  word-spacing: 0.5rem;
+}
+
+.home-main-description p {
+  opacity: 0;
+  transform: translateY(3rem);
+  animation: fadeInUp 2s ease 8s forwards;
+}
+
+@media screen and (max-width: 750px) {
+  .home-main-description p {
+    animation: none;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

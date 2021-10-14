@@ -42,7 +42,7 @@ export const SkillComponent = () => {
       ctgry: "Backend",
       skill: [
         { name: "Node.js", image: bgnode, color: "#8cc64d" },
-        { name: "Express.js", image: bgexpress, color: "#f7df1e" },
+        { name: "Express", image: bgexpress, color: "#f7df1e" },
         { name: "REST Api", image: bgrest, color: "#00619e" },
       ],
       color: "limegreen",

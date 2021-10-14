@@ -5,3 +5,43 @@
 body {
   background: url(assets/home-bg.jpg);
 }
+
+.typing-animation::before,
+.typing-animation::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.typing-animation::before {
+  background: #4f4fe0;
+  animation: typing 6s steps(23) 1s forwards;
+}
+.typing-animation::after {
+  width: 0.175em;
+  height: 1.5em;
+  background: black;
+  animation: typing 6s steps(23) 1s forwards, blink 750ms steps(23) infinite;
+}
+
+@media screen and (max-width: 750px) {
+  .typing-animation::before,
+  .typing-animation::after {
+    display: none;
+  }
+}
+
+@keyframes typing {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes blink {
+  to {
+    background: transparent;
+  }
+}

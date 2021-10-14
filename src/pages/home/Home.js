@@ -1,7 +1,6 @@
 import React from "react";
 import { NavBar } from "../../components/navbar/Navbar";
 import "./Home.css";
-import bghome from "../../assets/home-picture.png";
 
 export const Home = () => {
   return (
@@ -11,7 +10,7 @@ export const Home = () => {
       </div>
       <div className="home-content">
         <div className="home-main-description">
-          <h2>Hi, I am Hendra Wijaya</h2>
+          <h2 className="typing-animation">Hi, I am Hendra Wijaya.</h2>
           <p>Full stack web developer specialized in MERN stack.</p>
         </div>
       </div>
